@@ -24,7 +24,7 @@ error_reg_multi = 0
 error_desison = 0
 
 # Decision table results
-with open(r"C:\Users\israe\OneDrive\temp\decision.table.predicted.csv", newline='') as csvfile:
+with open(r"info/decision.table.predicted.csv", newline='') as csvfile:
     reader_result = csv.DictReader(csvfile)
     for row_result in reader_result:
         error_desison = error_desison + abs((float(row_result['actual'])) - (float(row_result['predicted'])))
@@ -32,7 +32,7 @@ with open(r"C:\Users\israe\OneDrive\temp\decision.table.predicted.csv", newline=
             pleaseWork = pleaseWork + 1
 
 # Read the file row by row
-with open(r"C:\Users\israe\OneDrive\temp\exp2.csv", newline='') as csvfile:
+with open(r"info\exp2.csv", newline='') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         count_particpents = count_particpents + 1
